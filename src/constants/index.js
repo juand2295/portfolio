@@ -26,7 +26,9 @@ import {
     Bibliobuds,
     postgreSQL,
     nextjs,
-    sequelize
+    sequelize,
+    Videogames,
+    Cava
   } from "../assets";
   
   export const navLinks = [
@@ -114,15 +116,15 @@ import {
       icon: threejs,
     },
     {
-      name: "git",
+      name: "GIT",
       icon: git,
     },
     {
-      name: "figma",
+      name: "Figma",
       icon: figma,
     },
     {
-      name: "sequelize",
+      name: "Sequelize",
       icon: sequelize,
     },
   ];
@@ -213,7 +215,7 @@ import {
     {
       name: "Bibliobuds",
       description:
-        "Book Ecommerce with different features for the customers like login/register, book search and filter, email notifications and a payment gateway. For the admin we made a dashboard and a bunch of tools to manage the inventory and the users.",
+        "It's a Book Ecommerce with different features for the customers like login/register, book search and filter, email notifications and a payment gateway. For the admin we made a dashboard and a bunch of tools to manage the inventory and the users.",
       tags: [
         {
           name: "Next.js",
@@ -229,35 +231,35 @@ import {
         },
       ],
       image: Bibliobuds,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/BiblioBuds/BiblioBuds",
       deploy_link: "https://biblio-buds-git-dev-bibliobuds.vercel.app/shop"
     },
     {
-      name: "Job IT",
+      name: "PI Videogames",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "This was my first Full-Stack app, it's a videogame search application connected to an external API (RAWG) that allows users to look for any videogame by its name and get a detailed description and an overall gaming community rating.",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "APIrest",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "CSS3",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: Videogames,
+      source_code_link: "https://github.com/juand2295/PI-VIDEOGAMES",
       deploy_link: undefined
     },
     {
-      name: "Trip Guide",
+      name: "La Cava",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "It is a cool Ecommerce for wine connoisseurs developed as final project at Henry's bootcamp, it has all the features a real-world Ecommerce has. And during its devlopment I had to learn a lot of new tech skills to be able to deliver an excellent project.",
       tags: [
         {
           name: "nextjs",
@@ -272,8 +274,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: Cava,
+      source_code_link: "https://github.com/juand2295/Cava-Ecommerce",
       deploy_link: undefined
     },
   ];
