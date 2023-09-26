@@ -19,6 +19,9 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
+import postgreSQL from "./tech/postgreSQL.png";
+import nextjs from "./tech/nextjs.png";
+import sequelize from "./tech/sequelize.png";
 import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
@@ -29,6 +32,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import Bibliobuds from "./Bibliobuds.png";
+import link from "./link.png";
 
 export {
   logo,
@@ -59,4 +64,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  Bibliobuds,
+  link,
+  postgreSQL,
+  nextjs,
+  sequelize
 };

@@ -23,6 +23,10 @@ import {
     jobit,
     tripguide,
     threejs,
+    Bibliobuds,
+    postgreSQL,
+    nextjs,
+    sequelize
   } from "../assets";
   
   export const navLinks = [
@@ -31,13 +35,18 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "skills",
+      title: "Skills",
+    },
+    {
+      id: "projects",
+      title: "Projects",
     },
     {
       id: "contact",
       title: "Contact",
     },
+    
   ];
   
   const services = [
@@ -46,7 +55,7 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "React Developer",
       icon: mobile,
     },
     {
@@ -72,13 +81,17 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
+    // {
+    //   name: "TypeScript",
+    //   icon: typescript,
+    // },
     {
       name: "React JS",
       icon: reactjs,
+    },
+    {
+      name: "Next JS",
+      icon: nextjs,
     },
     {
       name: "Redux Toolkit",
@@ -93,8 +106,8 @@ import {
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "PostgreSQL",
+      icon: postgreSQL,
     },
     {
       name: "Three JS",
@@ -109,8 +122,8 @@ import {
       icon: figma,
     },
     {
-      name: "docker",
-      icon: docker,
+      name: "sequelize",
+      icon: sequelize,
     },
   ];
   
@@ -198,25 +211,26 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Bibliobuds",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Book Ecommerce with different features for the customers like login/register, book search and filter, email notifications and a payment gateway. For the admin we made a dashboard and a bunch of tools to manage the inventory and the users.",
       tags: [
         {
-          name: "react",
+          name: "Next.js",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "PostgreSQL",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "Tailwind CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
+      image: Bibliobuds,
       source_code_link: "https://github.com/",
+      deploy_link: "https://biblio-buds-git-dev-bibliobuds.vercel.app/shop"
     },
     {
       name: "Job IT",
@@ -238,6 +252,7 @@ import {
       ],
       image: jobit,
       source_code_link: "https://github.com/",
+      deploy_link: undefined
     },
     {
       name: "Trip Guide",
@@ -259,6 +274,7 @@ import {
       ],
       image: tripguide,
       source_code_link: "https://github.com/",
+      deploy_link: undefined
     },
   ];
   

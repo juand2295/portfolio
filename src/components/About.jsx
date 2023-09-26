@@ -38,18 +38,17 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p 
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary, text-[17px] max-w-3xl leading-[28px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm a skilled software developer with experience in
+        JavaScript, and expertise in frameworks like React, Node.js, Redux, Express.js and
+        GIT. I'm a quick learner and focused on creating efficient and user-friendly solutions that solve
+        real-world problems.
       </motion.p>
       <div className='mt-16 flex flex-wrap gap-10'>
         {services.map((service, index)=> (
