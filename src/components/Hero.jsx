@@ -1,7 +1,6 @@
 import React from 'react'
 import { Typewriter, useTypewriter, Cursor } from 'react-simple-typewriter'
 
-
 const Hero = () => {
 
   const words = ["Full-stack", "JavaScript", "React", "Next.JS" ,  "React Native"];
@@ -19,7 +18,8 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        playsinline
+        playsinline="true" disablePictureInPicture="true"
+        poster="../assets/poster.png"
         >  
       </video>
       <div className="">

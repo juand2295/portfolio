@@ -172,6 +172,10 @@
   transform: translateZ(0);
 }
 
+video {
+  display: block; 
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
