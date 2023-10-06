@@ -4,6 +4,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+
+  .text-ani {
+    transform: translateX(50%);
+    opacity: 0;
+    animation: reveal 1s ease 1.7s forwards ;
+  }
+
+  .main-text {
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    
+    background-clip: text;
+    background: url(../src/assets/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100%{
+      background-position: 2000px 0;
+  }
+}
+
+@keyframes reveal {
+  0%{
+      transform: translateX(20);
+      opacity: 0;
+  }
+  100%{
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+}
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,9 +83,15 @@
   );
 }
 
+.orange-purple-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #d9550e 1.9%, #291176 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #d9550e 1.9%, #291176 97.5%);
+}
+
 .green-pink-gradient {
   background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #d5772b 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 

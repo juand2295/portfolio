@@ -2,35 +2,33 @@ import { OrbitControls, Preload, SpotLight, useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { Suspense, useEffect, useState } from 'react'
 import CanvasLoader from '../Loader'
+import { DirectionalLight, PerspectiveCamera } from 'three'
 
 const Computers = ({isMobile}) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf')
+  const computer = useGLTF('./lumen/scene.gltf')
 
   return (
     <mesh>
       <hemisphereLight intensity={1} groundColor="black"/>
-      <pointLight intensity={1}/>
-      <SpotLight
-      position={[1.4, 0.3, 3]}
-      angle={1.5}
-      
-      />
-      <spotLight
-        position={[0, 5, 1]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
+      <pointLight intensity={2} position={[0, 0.1, 0.1]}/>
+      <ambientLight intensity={4}/>
+      {/* <lightProbe/> */}
+      <directionalLight position={[0,1,0]} intensity={1.2}/>
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.6 : 0.75}
-        position={isMobile ? [0, -3, -2] : [0, -3.25, -1.5]}
-        rotation={[0, 0, -0.08]}
+        scale={isMobile ? 0.05 : 0.06}
+        position={isMobile ? [-0.1, -0.3, -0.3] : [-0.05, -0.4, -0.6]}
+        rotation={[0, -1.5, 0]}
       />
     </mesh>
   )
+}
+
+function CameraHelper() {
+  const camera = new PerspectiveCamera(60,1,1,3);
+  return <group position={[0,0,2]}>
+  <cameraHelper args={[camera]} />
+  </group>
 }
 
 const ComputersCanvas = () => {
@@ -56,18 +54,22 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop='demand'
       shadows
-      camera={{ position: [20, 3, 5], fov: 25}}
+      camera={isMobile? { position: [0, 0, 3], fov: 60, near:0.1, far:8} :{ position: [0, 0, 3], fov: 60, near:0.1, far:8}}
       gl={{preserveDrawingBuffer: true}}
     >
+      {/* <ambientLight />
+      <pointLight /> */}
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
-          enableZoom={false}
+          maxDistance={2.7}
+          minDistance={2}
           maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI/4}
         />
         <Computers isMobile={isMobile}/>
       </Suspense>
       <Preload all/>
+      {/* <CameraHelper/> */}
     </Canvas>
   )
 }
