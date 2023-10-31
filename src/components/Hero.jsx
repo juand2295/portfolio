@@ -1,5 +1,6 @@
 import React from 'react'
 import { Typewriter, useTypewriter, Cursor } from 'react-simple-typewriter'
+import { poster } from "../assets";
 
 const Hero = () => {
 
@@ -18,8 +19,9 @@ const Hero = () => {
         autoPlay
         loop
         muted
-        playsinline="true" disablePictureInPicture="true"
-        poster="../assets/poster.png"
+        playsInline={true}
+        disablePictureInPicture={true}
+        poster={poster}
         >  
       </video>
       <div className="">

@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import poster from "./poster.png"
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -36,6 +37,7 @@ import Bibliobuds from "./Bibliobuds.png";
 import Videogames from "./Videogames.png";
 import Cava from "./Cava.png";
 import link from "./link.png";
+import Timetrail from "./Timetrail.png"
 
 export {
   logo,
@@ -72,5 +74,7 @@ export {
   nextjs,
   sequelize,
   Videogames,
-  Cava
+  Cava,
+  Timetrail,
+  poster
 };
