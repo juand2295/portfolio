@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import {
   Navbar,
   Hero,
@@ -10,7 +10,6 @@ import {
   Contact,
   StarsCanvas,
 } from './components';
-import Preview from './components/Preview';
 
 function App() {
   BrowserRouter;
@@ -32,9 +31,6 @@ function App() {
           <StarsCanvas />
         </div>
       </div>
-      <Routes>
-        <Route exact path="/preview" element={<Preview />} />
-      </Routes>
     </BrowserRouter>
   );
 }
