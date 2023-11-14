@@ -38,6 +38,8 @@ import Videogames from "./Videogames.png";
 import Cava from "./Cava.png";
 import link from "./link.png";
 import Timetrail from "./Timetrail.png"
+import portfolio from "./portfolio.png"
+
 
 export {
   logo,
@@ -76,5 +78,6 @@ export {
   Videogames,
   Cava,
   Timetrail,
-  poster
+  poster,
+  portfolio
 };
